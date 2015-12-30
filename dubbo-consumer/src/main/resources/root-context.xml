@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://www.springframework.org/schema/beans" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:dubbo="http://code.alibabatech.com/schema/dubbo" xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.1.xsd
+        http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd
+        http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.1.xsd">
+
+	<context:component-scan base-package="com.jingoal.test" />
+
+	<!-- 提供方应用信息，用于计算依赖关系 -->
+	<dubbo:application name="jingoal-user-consumer" logger="log4j" owner="consumerAppOwner" organization="consumerOrg" />
+	
+	<!-- 使用注册中心暴露服务地址 -->
+<!--
+ 	<dubbo:registry address="127.0.0.1:9090" group="simple" version="1.0.0" />
+	<dubbo:registry address="127.0.0.1:9090" />
+ 	<dubbo:registry protocol="zookeeper" client="zkclient" address="zookeeper://127.0.0.1:2181"/>
+ 	<dubbo:registry protocol="zookeeper" client="zkclient" address="centos8:2181, centos7:2181"/>
+    -->
+ 	<dubbo:registry protocol="zookeeper" client="zkclient" address="zookeeper://zookeeperserver:2181"/>
+		
+    <!--
+	<dubbo:protocol name="dubbo" port="20882" payload="200000000" />
+	<dubbo:protocol name="dubbo" port="20881" payload="200000000" />
+	<dubbo:monitor protocol="registry"/>
+    -->
+
+	<!-- dubbo服务的配置 -->
+	<import resource="classpath:spring/dubbo-consumer.xml" />
+</beans>
