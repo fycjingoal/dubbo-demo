@@ -58,7 +58,7 @@ public class UserIfaceImpl implements UserIface {
      * @see com.jingoal.test.iface.UserIface#call(java.lang.String)
      */
     public String call(String arg) throws CommonException {
-        String serviceVer = "server default";
+        String serviceVer = "server v0.0.3";
         String id = Util.getSelfId(serviceVer);
         logger.debug(String.format("%s -> %s", arg, id));
         return id;

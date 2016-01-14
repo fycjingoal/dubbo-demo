@@ -37,7 +37,7 @@ public class ClientMain {
         int total =
                 3600
                 ;
-        String clientVer = "client default";
+        String clientVer = "client v0.0.3";
         String id = Util.getSelfId(clientVer);
         for(int i=0;i<total;i++){
             String sid = userIface.call(id);
