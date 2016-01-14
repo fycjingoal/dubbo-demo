@@ -37,7 +37,7 @@ public class ClientMain {
         int total =
                 3600
                 ;
-        String clientVer = " client default";
+        String clientVer = "client default";
         String id = Util.getSelfId(clientVer);
         for(int i=0;i<total;i++){
             String sid = userIface.call(id);
@@ -54,7 +54,7 @@ public class ClientMain {
         for(int i=0;i<3;i++){
             User u = userIface.getById(3);
             System.out.println(u);
-            Thread.sleep(3000);
+            Thread.sleep(1000);
         }
     }
 }
