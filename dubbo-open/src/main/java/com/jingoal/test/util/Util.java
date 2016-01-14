@@ -12,7 +12,7 @@ import java.lang.management.ManagementFactory;
 public class Util {
 
     public static String getSelfId() {
-        return String.format("%s #%d %s",
+        return String.format(" %s #%d %s",
                 ManagementFactory.getRuntimeMXBean().getName(),
                 Thread.currentThread().getId(),
                 Thread.currentThread()
@@ -20,6 +20,6 @@ public class Util {
     }
     
     public static String getSelfId(String desc) {
-        return getSelfId() + desc;
+        return desc + getSelfId();
     }
 }
