@@ -37,10 +37,11 @@ public class ClientMain {
         int total =
                 3600
                 ;
-        String id = Util.getSelfId();
+        String clientVer = " client default";
+        String id = Util.getSelfId(clientVer);
         for(int i=0;i<total;i++){
             String sid = userIface.call(id);
-            logger.info(String.format("%s -> %s", sid, id));
+            logger.info(String.format(" %s -> %s", id, sid));
             try {
                 Thread.sleep(2000);
             } catch (InterruptedException e) {
@@ -50,7 +51,7 @@ public class ClientMain {
     }
 
     public static void test1(UserIface userIface) throws InterruptedException {
-        for(int i=0;i<20;i++){
+        for(int i=0;i<3;i++){
             User u = userIface.getById(3);
             System.out.println(u);
             Thread.sleep(3000);

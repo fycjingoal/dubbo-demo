@@ -59,8 +59,9 @@ public class UserIfaceImpl implements UserIface {
      */
     public String call(String arg) throws CommonException {
         String id = Util.getSelfId();
-        logger.debug(String.format("%s -> %s", arg, id));
-        return id;
+        String serviceVer = " server default";
+        logger.debug(String.format("%s %s -> %s", serviceVer, arg, id));
+        return id + serviceVer;
     }
 
 }
