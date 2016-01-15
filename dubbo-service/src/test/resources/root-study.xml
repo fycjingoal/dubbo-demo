@@ -10,18 +10,63 @@
         
         <!-- test various dubbo elements -->
         
-        <dubbo:annotation />
-        <dubbo:application name="" />
-        <dubbo:argument />
-        <dubbo:consumer ></dubbo:consumer>
-        <dubbo:method name="" ></dubbo:method>
-        <dubbo:module name="" />
-        <dubbo:monitor ></dubbo:monitor>
-        <dubbo:parameter key="" value="" />
-        <dubbo:protocol ></dubbo:protocol>
-        <dubbo:provider ></dubbo:provider>
-        <dubbo:reference interface="" ></dubbo:reference>
-        <dubbo:registry ></dubbo:registry>
-        <dubbo:service interface="" ></dubbo:service>
+        <dubbo:annotation id="" package="" />
+        
+        <dubbo:application name="" architecture="" compiler="" default="" environment="" id="" logger="" monitor="" organization="" owner=""
+        registry="" version=""
+        />
+        
+        <dubbo:argument callback="" index="" type="" />
+        
+        <dubbo:consumer actives="" application="" async="false" cache="" callbacks="" check="" cluster="" connections=""
+        default="" filter="" generic="" group="" id="" init="" injvm="(deprecated)" layer="" lazy="" listener=""
+        loadbalance="" local="" merger="" mock="" module="" monitor="" onconnect="" ondisconnect="" owner="" proxy=""
+        reconnect="" registry="" retries="" scope="" sent="" sticky="" stub="" timeout="0" validation="" version="0.0.0"
+        ></dubbo:consumer>
+        
+        <dubbo:method name="" actives="" async="false" cache="" connections="" deprecated="" executes="" loadbalance=""
+        merger="" mock="" oninvoke="" onreturn="" onthrow="" reliable="(deprecated)" retries="" retry="(deprecated)"
+        return="" sent="" stat="-1" sticky="" timeout="0" validation=""
+        ></dubbo:method>
+        
+        <dubbo:module name="" default="" id="" monitor="" organization="" owner="" registry="" version="" />
+        
+        <dubbo:monitor address="" default="" group="" password="" protocol="" username="" version="" ></dubbo:monitor>
+        
+        <dubbo:parameter key="" value="" hide="true" />
+        
+        <dubbo:protocol accepts="" accesslog="" buffer="" charset="" client="" codec="" contextpath="" default="" dispatcher=""
+        dispather="(deprecated)" exchanger="" extension="" heartbeat="" host="" id="" iothreads="" keepalive="true" name=""
+        networker="" optimizer="" path="" payload="" port="" prompt="" queues="" register="" serialization="" server=""
+        status="" telnet="" threadpool="" threads="" transporter=""
+        ></dubbo:protocol>
+        
+        <dubbo:provider accepts="" accesslog="" actives="" application="" async="false" buffer="" cache="" callbacks=""
+        charset="" client="" cluster="" codec="" connections="" contextpath="" default="" delay="0" deprecated="" dispatcher=""
+        dispather="(deprecated)" document="" dynamic="" exchanger="" executes="" export="" filter="" group="" host="" id=""
+        iothreads="" layer="" listener="" loadbalance="" local="" merger="" mock="" module="" monitor="" networker=""
+        onconnect="" ondisconnect="" owner="" path="" payload="" port="" prompt="" protocol="" proxy="" queues="" register=""
+        registry="" retries="" scope="" sent="" serialization="" server="" status="" stub="" telnet="" threadpool="" threads=""
+        timeout="0" token="" transporter="" validation="" version="0.0.0" wait="" weight=""
+         ></dubbo:provider>
+        
+        <dubbo:reference interface="" actives="" application="" async="false" cache="" callbacks="" check="" client="" cluster=""
+        connections="" consumer="(deprecated)" filter="" generic="" group="" id="" init="" injvm="(deprecated)" layer=""
+        lazy="" listener="" loadbalance="" local="" merger="" mock="" module="" monitor="" onconnect="" ondisconnect="" owner=""
+        protocol="" proxy="" reconnect="" registry="" retries="" scope="" sent="" sticky="" stub="" timeout="0" url="" validation=""
+        version="0.0.0"
+        ></dubbo:reference>
+        
+        <dubbo:registry address="" check="" client="" cluster="" default="" dynamic="" file="" group="" id="" password=""
+        port="" protocol="" register="" server="" session="" subscribe="" timeout="" transport="" transporter="" username=""
+        version="" wait=""
+        ></dubbo:registry>
+        
+        <dubbo:service interface="" accesslog="" actives="" application="" async="false" cache="" callbacks="" class="" cluster=""
+        connections="" delay="0" deprecated="" document="" dynamic="" executes="" export="" filter="" generic="" group=""
+        id="" layer="" listener="" loadbalance="" local="" merger="" mock="" module="" monitor="" onconnect="" ondisconnect=""
+        owner="" path="" protocol="" provider="" proxy="" ref="" register="" registry="" retries="" scope="" sent="" stub=""
+        timeout="0" token="" validation="" version="0.0.0" weight=""
+        ></dubbo:service>
 
 </beans>
