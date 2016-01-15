@@ -21,6 +21,8 @@ public class UserIfaceImpl implements UserIface {
     @Autowired
     private UserManager userManager;
 
+    String serviceVer = "server default";
+
     public void addUser(User user) throws CommonException {
         System.out.println("addUser");
         userManager.addUser(user);
@@ -58,7 +60,6 @@ public class UserIfaceImpl implements UserIface {
      * @see com.jingoal.test.iface.UserIface#call(java.lang.String)
      */
     public String call(String arg) throws CommonException {
-        String serviceVer = "server default";
         String id = Util.getSelfId(serviceVer);
         logger.debug(String.format("%s -> %s", arg, id));
         return id;

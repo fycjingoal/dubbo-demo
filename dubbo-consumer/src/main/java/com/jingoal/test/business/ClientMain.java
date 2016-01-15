@@ -16,6 +16,8 @@ import com.jingoal.test.util.Util;
 public class ClientMain {
     
     static Logger logger = LoggerFactory.getLogger(ClientMain.class);
+    
+    static String clientVer = "client default";
 
     public static void main(String[] args) throws Exception {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(
@@ -37,7 +39,6 @@ public class ClientMain {
         int total =
                 3600
                 ;
-        String clientVer = "client default";
         String id = Util.getSelfId(clientVer);
         for(int i=0;i<total;i++){
             String sid = userIface.call(id);
